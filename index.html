@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/addon/hint/show-hint.css">
+    <style>
+        /* Define layout for side-by-side code input and conversion */
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .editor-container {
+            width: 50%;
+        }
+        .output-container {
+            width: 50%;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loader-container">
+        <div id="loader"></div>
+    </div>
+    <div class="container">
+        <div class="editor-container">
+            <select id="sourceLanguageSelect">
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="php">Php</option>
+                <option value="ruby">Ruby</option>
+                <option value="c++">C++</option>
+                <option value="html">Html</option>
+                <option value="rust">Rust</option>
+                <option value="swift">Swift</option>
+                <!-- Add more source language options here -->
+            </select>
+            <textarea id="code"></textarea>
+        </div>
+        <div class="output-container">
+            <select id="targetLanguageSelect">
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="php">Php</option>
+                <option value="ruby">Ruby</option>
+                <option value="c++">C++</option>
+                <option value="html">Html</option>
+                <option value="rust">Rust</option>
+                <option value="swift">Swift</option>
+                <!-- Add more target language options here -->
+            </select>
+            <button id="convertButton">Convert Code</button>
+            <button id="summarizeTextButton">Debug code</button>
+            <button id="reviewcode">Review Code</button>
+            <div>
+                <textarea name="" id="output-content" cols="100" rows="50"></textarea></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/javascript/javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/python/python.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/addon/hint/show-hint.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
